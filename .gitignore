@@ -4,7 +4,32 @@
 /.settings
 /.jsbeautifyrc
 /.php-cs-fixer.php
-/.vscode
+
+# IDE and Editor Files
+/.vscode/
+/.idea/
+*.swp
+*.swo
+*~
+.#*
+\#*#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Rust-Analyzer and Language Server
+rust-project.json
+.rust-analyzer/
 
 /assets/css/*.opt.css
 /assets/about
@@ -88,3 +113,94 @@ composer.lock
 !/data/cache/.htaccess
 !/data/cache/index.html
 !/data/tmp/index.html
+
+# Rust Analytics Engine
+# Ignore build artifacts but track source code
+rust-analytics/target/
+rust-analytics/Cargo.lock
+rust-analytics/.rustc_info.json
+rust-analytics/CACHEDIR.TAG
+
+# Analytics data files
+/data/nukeviet_analytics.db
+/data/nukeviet_analytics.db-*
+/data/analytics/
+/data/*.sqlite
+/data/*.sqlite3
+/data/*.db-journal
+/data/*.db-wal
+/data/*.db-shm
+
+# Rust build artifacts (anywhere in project)
+target/
+Cargo.lock
+.rustc_info.json
+CACHEDIR.TAG
+
+# Rust library files
+*.dylib
+*.so
+*.dll
+*.rlib
+*.pdb
+*.a
+*.lib
+
+# Rust development files
+*.rs.bk
+*.orig
+.cargo/
+rust-project.json
+.rust-analyzer/
+
+# Rust profiling and testing
+*.profraw
+perf.data*
+flamegraph.svg
+criterion/
+benches/target/
+
+# Platform-specific Rust artifacts
+*.dSYM/
+*.exe
+*.ilk
+*.out
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Rust toolchain
+rust-toolchain
+rust-toolchain.toml
+.rustup/
+
+# Rust package manager
+.cargo/config
+.cargo/config.toml
+.cargo/credentials
+.cargo/registry/
+.cargo/git/
+
+# Additional Rust artifacts
+cross/
+.cross/
+pkg/
+wasm-pack.log
+*.wasm
+fuzz/target/
+fuzz/corpus/
+fuzz/artifacts/
+*.profdata
+lcov.info
+coverage/
+tarpaulin-report.html
+.clippy.toml
+.cargo-audit.toml
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+*.pid
