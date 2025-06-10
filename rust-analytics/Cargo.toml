@@ -1,0 +1,30 @@
+[package]
+name = "nukeviet-analytics"
+version = "1.0.1"
+edition = "2021"
+authors = ["The Augster <augster@nukeviet.vn>"]
+description = "Advanced analytics engine for NukeViet CMS with intelligent bot detection"
+license = "MIT"
+
+[lib]
+name = "nukeviet_analytics"
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+rusqlite = { version = "0.36", features = ["bundled"] }
+regex = "1.11"
+chrono = { version = "0.4", features = ["serde"] }
+uuid = { version = "1.11", features = ["v4"] }
+thiserror = "2.0"
+anyhow = "1.0"
+tokio = { version = "1.0", features = ["full"] }
+reqwest = { version = "0.12", features = ["json"] }
+url = "2.5"
+base64 = "0.22"
+sha2 = "0.10"
+rand = "0.9"
+
+[dev-dependencies]
+tokio-test = "0.4"
